@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Wiki</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+      const cursorInner = document.querySelector('.cursor-inner');
+      const cursorOuter = document.querySelector('.cursor-outer');
+
+      document.addEventListener('mousemove', e => {
+          cursorInner.style.left = e.pageX + 'px';
+          cursorInner.style.top = e.pageY + 'px';
+          
+          cursorOuter.style.left = e.pageX + 'px';
+          cursorOuter.style.top = e.pageY + 'px';
+      });
+
+      const hoverableElements = document.querySelectorAll('a, button, h1');
+
+      hoverableElements.forEach(item => {
+          item.addEventListener('mouseover', () => {
+              cursorInner.style.transform = 'scale(2) translate(-25%, -25%)';
+              cursorOuter.style.transform = 'scale(1.5) translate(-33%, -33%)';
+          });
+          item.addEventListener('mouseout', () => {
+              cursorInner.style.transform = 'scale(1) translate(-50%, -50%)';
+              cursorOuter.style.transform = 'scale(1) translate(-50%, -50%)';
+          });
+      });
+  });
+
+    </script>
+</head>
+<body>
+    <div class="cursor-inner" id="cursor-inner"></div>
+    <div class="cursor-outer" id="cursor-outer"></div>
+    <h1>Dog Wikipedia</h1>
+    <p id="est">This wiki lists all known dogs from <br><a href="https://www.instagram.com/jjiegedamn_14/" class="chinese"> 灰狗日记 </a></p>
+    <div id="flex-container">
+        <div class="card">
+            <a href="./fatdog.html">
+                <div class="content">
+                    <center>
+                        <h2 class="dog-title">Fat Dog</h2>
+                        <p class="des">anjing gila</p>
+                        <img src="blackdog.png">
+                    </center>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./greydog.html">
+                <div class="content">
+                    <center>
+                        <h2 class="dog-title">Grey Dog</h2>
+                        <p class="des">main character</p>
+                        <img src="dog.png">
+                    </center>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./fatngreydogmom.html">
+                <div class="content">
+                    <center>
+                        <h2 class="dog-title">Moms</h2>
+                        <p class="des">character</p>
+                        <div class="fleximg">
+                            <img src="mama.png">
+                            <img src="blackdog_mama.png" alt="">
+                        </div>
+                    </center>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
