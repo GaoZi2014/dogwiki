@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fat Dog | Dog Wiki</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+      const cursorInner = document.querySelector('.cursor-inner');
+      const cursorOuter = document.querySelector('.cursor-outer');
+
+      document.addEventListener('mousemove', e => {
+          cursorInner.style.left = e.clientX + 'px';
+          cursorInner.style.top = e.clientY + 'px';
+          
+          cursorOuter.style.left = e.clientX + 'px';
+          cursorOuter.style.top = e.clientY + 'px';
+      });
+
+      const hoverableElements = document.querySelectorAll('a, button, h1');
+
+      hoverableElements.forEach(item => {
+          item.addEventListener('mouseover', () => {
+              cursorInner.style.transform = 'scale(2) translate(-25%, -25%)';
+              cursorOuter.style.transform = 'scale(1.5) translate(-33%, -33%)';
+          });
+          item.addEventListener('mouseout', () => {
+              cursorInner.style.transform = 'scale(1) translate(-50%, -50%)';
+              cursorOuter.style.transform = 'scale(1) translate(-50%, -50%)';
+          });
+      });
+  });
+
+    </script>
+</head>
+<body>
+    <div class="cursor-inner" id="cursor-inner"></div>
+    <div class="cursor-outer" id="cursor-outer"></div>
+    <a href="index.html"><p class="bth-btn">back to home</p></a>
+    <center>
+        <img class="dog-img" src="phone.png" alt="">
+        <img class="dog-img" src="phone_back.png" alt="">
+        <h1>Dog Phone</h1>
+        <p class="des">tool</p>
+    </center>
+    <div id="container">
+        <center>
+            <h2>Common phone used by 灰狗日记 characters.</h2>
+            <br>
+            <div class="table">
+                    <h2 class="red">INFORMATION:</h2>
+                    <div class="line"></div>
+                    <img src="phone_back.png" alt="">
+                    <div class="line"></div>
+                    <h2>Name: Dog Phone</h2>
+                    <div class="line"></div>
+                    <h2>characters' tool</h2>
+                    <div class="line"></div>
+                    <h2>Properties: black color</h2>
+                    <div class="line"></div>
+                    <h2>Rarity: <span style="color: green">Common</span></h2>
+                    <div class="line"></div>
+                    <h2>Type: Phone</h2>
+                    <div class="line"></div>
+                    <h2>Useful: 11/10</h2>
+                </div>
+        </center>
+    </div>
+</body>
+</html>

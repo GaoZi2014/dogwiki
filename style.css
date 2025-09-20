@@ -204,3 +204,34 @@ a {
   83%  { color: indigo; }
   100% { color: violet; }
 }
+
+/* Styling for the category buttons */
+.category-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.filter-btn.active {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+}
+
+.hide {
+    display: none;
+}
