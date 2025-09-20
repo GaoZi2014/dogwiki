@@ -120,7 +120,8 @@ img {
 }
 
 a { 
-    color: rgb(0, 24, 104);
+    color: rgb(98, 72, 0);
+    background-color: #ffffff6d;
     margin: 0;
     text-decoration: none;
 }
@@ -131,6 +132,7 @@ a {
     background-color: rgb(255, 255, 255);
     width: 100%;
     min-width: 200px;
+    padding: 10px;
 }
 
 .bth-btn:hover {
