@@ -111,7 +111,7 @@ img {
     scale: 1.1;
     cursor: pointer;
     img {
-        rotate: -20deg;
+        rotate: -5deg;
     }
 }
 
@@ -172,7 +172,7 @@ a {
     }
 
     h2 {
-        width: 100%;
+        width: 90%;
     }
 
     .card {
@@ -186,6 +186,7 @@ a {
     .achivementimg {
         width: 90%;
     }
+
 }
 
 .fleximg {
@@ -197,20 +198,6 @@ a {
     margin: 5px;
     width: 30%;
     min-width: 100px;
-}
-
-.rainbow {
-  animation: rainbow 5s linear infinite;
-}
-
-@keyframes rainbow {
-  0%   { color: red; }
-  16%  { color: orange; }
-  33%  { color: yellow; }
-  50%  { color: green; }
-  66%  { color: blue; }
-  83%  { color: indigo; }
-  100% { color: violet; }
 }
 
 /* Styling for the category buttons */
@@ -227,7 +214,7 @@ a {
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
 .filter-btn:hover {
@@ -238,6 +225,7 @@ a {
     background-color: #333;
     color: white;
     border-color: #333;
+    scale: 1.1;
 }
 
 .hide {
@@ -256,4 +244,27 @@ a {
 .achivementimg:hover {
     rotate: -10deg;
     scale: 1.1;
+}
+
+/* RARITY COLOR */
+.common {
+    color: green;
+}
+
+.divine {
+    color: orange;
+}
+
+@keyframes rainbow {
+  0%   { color: red; }
+  16%  { color: orange; }
+  33%  { color: yellow; }
+  50%  { color: green; }
+  66%  { color: blue; }
+  83%  { color: indigo; }
+  100% { color: violet; }
+}
+
+.prismatic {
+  animation: rainbow 5s linear infinite;
 }
