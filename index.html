@@ -16,11 +16,11 @@
       const cursorOuter = document.querySelector('.cursor-outer');
 
       document.addEventListener('mousemove', e => {
-          cursorInner.style.left = e.pageX + 'px';
-          cursorInner.style.top = e.pageY + 'px';
+          cursorInner.style.left = e.clientX + 'px';
+          cursorInner.style.top = e.clientY + 'px';
           
-          cursorOuter.style.left = e.pageX + 'px';
-          cursorOuter.style.top = e.pageY + 'px';
+          cursorOuter.style.left = e.clientX + 'px';
+          cursorOuter.style.top = e.clientY + 'px';
       });
 
       const hoverableElements = document.querySelectorAll('a, button, h1');
@@ -76,6 +76,20 @@
                         <div class="fleximg">
                             <img src="mama.png">
                             <img src="blackdog_mama.png" alt="">
+                        </div>
+                    </center>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./momsarmor.html">
+                <div class="content">
+                    <center>
+                        <h2 class="dog-title">Moms' armor</h2>
+                        <p class="des">armor</p>
+                        <div class="fleximg">
+                            <img src="ak.png">
+                            <img src="bangqiugun.png" alt="">
                         </div>
                     </center>
                 </div>

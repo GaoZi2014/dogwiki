@@ -16,11 +16,11 @@
       const cursorOuter = document.querySelector('.cursor-outer');
 
       document.addEventListener('mousemove', e => {
-          cursorInner.style.left = e.pageX + 'px';
-          cursorInner.style.top = e.pageY + 'px';
+          cursorInner.style.left = e.clientX + 'px';
+          cursorInner.style.top = e.clientY + 'px';
           
-          cursorOuter.style.left = e.pageX + 'px';
-          cursorOuter.style.top = e.pageY + 'px';
+          cursorOuter.style.left = e.clientX + 'px';
+          cursorOuter.style.top = e.clientY + 'px';
       });
 
       const hoverableElements = document.querySelectorAll('a, button, h1');
